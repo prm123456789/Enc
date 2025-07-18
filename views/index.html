@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INCONNU BOY ENCRY</title>
+  <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>🔐 INCONNU BOY ENCRY</h1>
+    <p class="subtext">Powered by Inconnu Boy Tech 2024</p>
+
+    <div class="form-section">
+      <h2>1. Crypter un texte</h2>
+      <textarea id="textInput" placeholder="Entrez votre texte ici..."></textarea>
+      <select id="textMethod">
+        <option value="base64">Base64</option>
+        <option value="hex">Hex</option>
+        <option value="rot13">ROT13</option>
+        <option value="aes">AES (clé requise)</option>
+      </select>
+      <input id="textKey" type="text" placeholder="Clé (pour AES uniquement)">
+      <button onclick="encryptText()">Crypter</button>
+      <textarea id="textOutput" readonly placeholder="Résultat du cryptage..."></textarea>
+      <button onclick="copyResult('textOutput')">📋 Copier</button>
+    </div>
+
+    <div class="form-section">
+      <h2>2. Crypter un fichier</h2>
+      <input type="file" id="fileInput"/>
+      <select id="fileMethod">
+        <option value="base64">Base64</option>
+        <option value="hex">Hex</option>
+        <option value="aes">AES (clé requise)</option>
+      </select>
+      <input id="fileKey" type="text" placeholder="Clé (pour AES uniquement)">
+      <button onclick="encryptFile()">Crypter</button>
+      <textarea id="fileOutput" readonly placeholder="Résultat du cryptage..."></textarea>
+      <button onclick="copyResult('fileOutput')">📋 Copier</button>
+    </div>
+
+    <footer>
+      <a href="https://whatsapp.com/channel/0029Vb6T8td5K3zQZbsKEU1R" target="_blank">
+        📲 Contact WhatsApp
+      </a>
+    </footer>
+  </div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
